@@ -6,7 +6,7 @@
 	<name>jetty-nosql-memcached-xstream</name>
 	<groupId>com.geishatokyo.jetty</groupId>
 	<properties>
-		<jetty.version>8.0.0.RC0</jetty.version>
+		<jetty.version>8.0.2.v20111006</jetty.version>
 		<junit.version>4.8.1</junit.version>
 	</properties>
 	<dependencies>
@@ -36,12 +36,12 @@
 		<dependency>
 			<groupId>com.geishatokyo.jetty</groupId>
 			<artifactId>jetty-nosql-memcached</artifactId>
-      <version>${project.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty.tests</groupId>
-			<artifactId>test-sessions-common</artifactId>
-			<version>${jetty.version}</version>
+			<groupId>com.geishatokyo.jetty.tests</groupId>
+			<artifactId>test-memcached-sessions</artifactId>
+			<version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
