@@ -21,6 +21,7 @@ public class XStreamTranscoder implements ISerializationTranscoder {
 		return raw;
 	}
 
+	@SuppressWarnings("unchecked")
 	public <T> T decode(byte[] raw, Class<T> klass) throws TranscoderException {
 		T obj = null;
 		try {
