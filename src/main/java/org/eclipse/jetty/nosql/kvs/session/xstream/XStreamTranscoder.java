@@ -1,7 +1,7 @@
-package org.eclipse.jetty.nosql.session.xstream;
+package org.eclipse.jetty.nosql.kvs.session.xstream;
 
-import org.eclipse.jetty.nosql.session.ISerializationTranscoder;
-import org.eclipse.jetty.nosql.session.TranscoderException;
+import org.eclipse.jetty.nosql.kvs.session.ISerializationTranscoder;
+import org.eclipse.jetty.nosql.kvs.session.TranscoderException;
 
 import com.thoughtworks.xstream.XStream;
 

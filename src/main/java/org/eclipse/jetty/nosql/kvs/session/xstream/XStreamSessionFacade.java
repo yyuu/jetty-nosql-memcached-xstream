@@ -1,6 +1,9 @@
-package org.eclipse.jetty.nosql.session.xstream;
+package org.eclipse.jetty.nosql.kvs.session.xstream;
 
-import org.eclipse.jetty.nosql.session.*;
+import org.eclipse.jetty.nosql.kvs.session.AbstractSessionFacade;
+import org.eclipse.jetty.nosql.kvs.session.ISerializableSession;
+import org.eclipse.jetty.nosql.kvs.session.ISerializationTranscoder;
+import org.eclipse.jetty.nosql.kvs.session.TranscoderException;
 
 public class XStreamSessionFacade extends AbstractSessionFacade {
 	public XStreamSessionFacade() {
