@@ -16,8 +16,6 @@ package org.eclipse.jetty.nosql.memcached;
 import org.eclipse.jetty.nosql.kvs.session.xstream.XStreamSessionFacade;
 import org.eclipse.jetty.nosql.memcached.MemcachedSessionManager;
 import org.eclipse.jetty.server.SessionManager;
-import org.eclipse.jetty.nosql.kvs.session.xstream.*;
-
 
 /**
  * @version $Revision$ $Date$
