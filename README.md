@@ -1,4 +1,4 @@
-# jetty-nosql-memcached-kryo
+# jetty-nosql-memcached-xstream
 
 ## Overview
 
@@ -9,14 +9,14 @@ https://github.com/yyuu/jetty-nosql-memcached
 
 * jetty (8.0.0 or later)
 * jetty-nosql-memcached (0.1.0 or later)
-* kryo
+* xstream
 
 You may need following dependency to run tests.
 
 * org.eclipse.jetty.tests:test-sessions-common
 
 
-## Configuration (KryoSessionFacade)
+## Configuration (XStreamSessionFacade)
 
 Configuring MemcachedSessionIdManager in ${JETTY_HOME}/etc/jetty.xml.
 
@@ -49,7 +49,7 @@ Configuring MemcachedSessionIdManager in ${JETTY_HOME}/etc/jetty.xml.
     </Configure>
 
 
-Configuring MemcachedSessionManager and KryoSessionFacade in ${APP_ROOT}/WEB-INF/jetty-web.xml.
+Configuring MemcachedSessionManager and XStreamSessionFacade in ${APP_ROOT}/WEB-INF/jetty-web.xml.
 
     <?xml version="1.0" encoding="UTF-8"?>
     <Configure class="org.eclipse.jetty.webapp.WebAppContext">
@@ -67,7 +67,7 @@ Configuring MemcachedSessionManager and KryoSessionFacade in ${APP_ROOT}/WEB-INF
                 <Ref id="memcachedSessionIdManager" />
               </Set>
               <Set name="sessionFacade">
-                <New class="org.eclipse.jetty.nosql.session.kryo.KryoSessionFacade" />
+                <New class="org.eclipse.jetty.nosql.kvs.session.xstream.XStreamSessionFacade" />
               </Set>
             </New>
           </Arg>
