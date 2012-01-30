@@ -36,4 +36,10 @@ public class XStreamSessionFacade extends AbstractSessionFacade {
 		}
 		return session;
 	}
+
+	@Override
+	public void setClassLoader(ClassLoader cl) {
+		XStreamTranscoder tc = new XStreamTranscoder(cl);
+		transcoder = tc;
+	}
 }
