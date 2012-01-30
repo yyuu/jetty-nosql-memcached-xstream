@@ -7,8 +7,16 @@ import com.thoughtworks.xstream.XStream;
 
 public class XStreamTranscoder implements ISerializationTranscoder {
 	private XStream xstream = null;
+	private ClassLoader classLoader = null;
+
 	public XStreamTranscoder() {
+		this(Thread.currentThread().getContextClassLoader());
+	}
+
+	public XStreamTranscoder(ClassLoader cl) {
 		xstream = new XStream();
+		xstream.setClassLoader(cl);
+		classLoader = cl;
 	}
 
 	public byte[] encode(Object obj) throws TranscoderException {
