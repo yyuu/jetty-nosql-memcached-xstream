@@ -7,6 +7,9 @@ public class RemoveSessionTest extends AbstractMemcachedRemoveSessionTest
     @Override
     public AbstractTestServer createServer(int port, int max, int scavenge)
     {
-        return new XStreamMemcachedTestServer(port,max,scavenge);
+        XStreamMemcachedTestServer server = new XStreamMemcachedTestServer(port,max,scavenge);
+        // FIXME: cannot set in parent?
+        swallowExceptions = !server.isFullTest() && !server.isStickyTest();
+        return server;
     }
 }

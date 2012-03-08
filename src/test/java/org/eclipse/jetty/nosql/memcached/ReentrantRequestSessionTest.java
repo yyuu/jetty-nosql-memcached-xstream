@@ -7,6 +7,9 @@ public class ReentrantRequestSessionTest extends AbstractMemcachedReentrantReque
     @Override
     public AbstractTestServer createServer(int port)
     {
-        return new XStreamMemcachedTestServer(port);
+        XStreamMemcachedTestServer server = new XStreamMemcachedTestServer(port);
+        // FIXME: cannot set in parent?
+        swallowExceptions = !server.isFullTest() && !server.isStickyTest();
+        return server;
     }
 }
