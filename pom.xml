@@ -7,45 +7,24 @@
 	</parent>
 	<artifactId>jetty-nosql-memcached-xstream</artifactId>
 	<name>jetty-nosql-memcached-xstream</name>
-	<properties>
-<!--
-		<jetty.version>8.0.2.v20111006</jetty.version>
-  -->
-	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-jmx</artifactId>
-			<version>${jetty.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-nosql</artifactId>
-			<version>${jetty.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-server</artifactId>
-			<version>${jetty.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.geishatokyo.jetty</groupId>
 			<artifactId>jetty-nosql-memcached</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.geishatokyo.jetty.tests</groupId>
-			<artifactId>test-memcached-sessions</artifactId>
-			<version>${project.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
@@ -53,14 +32,23 @@
 			<version>1.4.1</version>
 		</dependency>
 		<dependency>
-			<groupId>com.geishatokyo.jetty</groupId>
-			<artifactId>jetty-nosql-kvs</artifactId>
-			<version>${project.version}</version>
+			<groupId>com.geishatokyo.jetty.tests</groupId>
+			<artifactId>test-memcached-sessions</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency><!-- added slf4j as dependency since xmemcached requires it on testing -->
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.6.1</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
