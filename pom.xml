@@ -8,6 +8,7 @@
 	<artifactId>jetty-nosql-memcached-xstream</artifactId>
 	<name>jetty-nosql-memcached-xstream</name>
 	<description>A session manager impl for jetty to store sessions on memcached with xstream serialization.</description>
+	<url>https://github.com/yyuu/jetty-nosql-memcached-xstream</url>
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
